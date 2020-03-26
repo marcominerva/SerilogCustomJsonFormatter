@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29920.165
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SerilogCustomJsonFormatter", "SerilogCustomJsonFormatter\SerilogCustomJsonFormatter.csproj", "{5B95B889-42F5-441A-9AA5-E38A18212E83}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5B95B889-42F5-441A-9AA5-E38A18212E83}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5B95B889-42F5-441A-9AA5-E38A18212E83}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5B95B889-42F5-441A-9AA5-E38A18212E83}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5B95B889-42F5-441A-9AA5-E38A18212E83}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {B3FD7105-ED09-4330-987A-3A11E16E856E}
+	EndGlobalSection
+EndGlobal
