@@ -13,6 +13,10 @@ namespace SerilogCustomJsonFormatter
         private static readonly JsonValueFormatter ValueFormatter = new JsonValueFormatter(typeTagName: null);
         private const string COMMA_DELIMITER = ",";
 
+        private const string TIMESTAMP_FIELD = "Timestamp";
+        private const string LEVEL_FIELD = "Level";
+        private const string MESSAGE_FIELD = "Message";
+
         public static CustomLogEventFormatter Formatter { get; } = new CustomLogEventFormatter();
 
         public void Format(LogEvent logEvent, TextWriter output)
@@ -31,9 +35,9 @@ namespace SerilogCustomJsonFormatter
 
             var precedingDelimiter = string.Empty;
 
-            Write(nameof(LogEvent.Timestamp), logEvent.Timestamp.UtcDateTime.ToString("o"));
-            Write(nameof(LogEvent.Level), logEvent.Level.ToString());
-            Write("Message", logEvent.RenderMessage());
+            Write(TIMESTAMP_FIELD, logEvent.Timestamp.ToUniversalTime().DateTime.ToString("o"));
+            Write(LEVEL_FIELD, logEvent.Level.ToString());
+            Write(MESSAGE_FIELD, logEvent.RenderMessage());
 
             if (logEvent.Properties.Any())
             {
