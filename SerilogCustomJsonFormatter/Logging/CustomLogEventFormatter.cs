@@ -6,7 +6,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 
-namespace SerilogCustomJsonFormatter
+namespace SerilogCustomJsonFormatter.Logging
 {
     public class CustomLogEventFormatter : ITextFormatter
     {
