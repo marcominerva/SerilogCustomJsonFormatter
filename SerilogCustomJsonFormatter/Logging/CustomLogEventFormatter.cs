@@ -35,7 +35,9 @@ namespace SerilogCustomJsonFormatter.Logging
 
             var precedingDelimiter = string.Empty;
 
-            Write(TIMESTAMP_FIELD, logEvent.Timestamp.ToUniversalTime().DateTime.ToString("o"));
+            //Write(TIMESTAMP_FIELD, logEvent.Timestamp.DateTime.ToString("o"));                    // Local Time
+            Write(TIMESTAMP_FIELD, logEvent.Timestamp.ToUniversalTime().DateTime.ToString("o"));    // Convert to UTC
+
             Write(LEVEL_FIELD, logEvent.Level.ToString());
             Write(MESSAGE_FIELD, logEvent.RenderMessage());
 
