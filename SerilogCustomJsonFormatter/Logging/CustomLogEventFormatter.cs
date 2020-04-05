@@ -16,6 +16,7 @@ namespace SerilogCustomJsonFormatter.Logging
         private const string TIMESTAMP_FIELD = "Timestamp";
         private const string LEVEL_FIELD = "Level";
         private const string MESSAGE_FIELD = "Message";
+        private const string EXCEPTION_FIELD = "Exception";
 
         public static CustomLogEventFormatter Formatter { get; } = new CustomLogEventFormatter();
 
@@ -40,6 +41,11 @@ namespace SerilogCustomJsonFormatter.Logging
 
             Write(LEVEL_FIELD, logEvent.Level.ToString());
             Write(MESSAGE_FIELD, logEvent.RenderMessage());
+
+            if (logEvent.Exception != null)
+            {
+                Write(EXCEPTION_FIELD, logEvent.Exception.ToString());
+            }
 
             if (logEvent.Properties.Any())
             {
